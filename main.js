@@ -23,14 +23,17 @@ $(function(){
 
           $.get(url, function(res){
             console.log(res.photos.photo)
-
-            res.photos.photo.forEach(element => {
-                $(".info").append(`<img src="${element.url_n}"/>`)
-            });
+            if(res.photos.photo.length > 1){
+                res.photos.photo.forEach(element => {
+                    $(".info").append(`<img src="${element.url_n}"/>`)
+                });
+            }else{
+                $(".info").append("Nothing Found!")
+            }
         })
     })
     }else{
-        console.log("couldnt find")
+        $(".info").append("Could find anything without your location!")
     }
     
 
