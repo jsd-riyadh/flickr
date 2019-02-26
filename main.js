@@ -6,7 +6,7 @@ $(function(){
           
           let url = "https://api.flickr.com/services/rest/?"
           let params = {
-              api_key : "5bb64e545d706386c2748ea4b6b79929",
+              api_key : "<API KEY HERE>",
               lat : position.coords.latitude.toFixed(1),
               lon : position.coords.longitude.toFixed(1),
               method:"flickr.photos.search",
